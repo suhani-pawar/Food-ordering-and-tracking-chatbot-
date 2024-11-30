@@ -1,0 +1,1 @@
+SELECT * FROM foodorder_bot.order_tracking;

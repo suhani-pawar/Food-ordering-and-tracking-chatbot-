@@ -1,0 +1,111 @@
+Default Welcome Intent
+======================
+Text response:  
+1 Hello, How can I help you? You can say "New Order" or "Track Order"
+2 Good day! What can I do for you today? You can say "New Order" or "Track Order"
+3 Greetings! How can I assist? You can say "New Order" or "Track Order"
+4	
+
+				
+Default Fallback Intent
+========================
+Text Response: 
+I didn't understand. You can say 'New Order' or 'Track Order'. Also, in a new order, please mention only items from our available menu:                                                                                                                                                    ☕ Tea - ₹10
+🥪 Vada Pav - ₹20
+🥟 Samosa - ₹20
+🍘 Kachori - ₹20
+🥣 Idli - ₹25
+🍛 Dosa - ₹35
+🍲 Misal - ₹40 Also specify a quantity for each item for example: "One vada and 2 misal"		
+
+
+Intent= new.order
+=================
+
+Training phrases =
+Add a new order
+Proceed with a new order
+Begin a new order
+Place an order etc.
+
+Text Response = 
+		Welcome to kit's canteen ! Here’s our menu:
+
+☕ Tea - ₹10
+🥪 Vada Pav - ₹20
+🥟 Samosa - ₹20
+🍘 Kachori - ₹20
+🥣 Idli - ₹25
+🍛 Dosa - ₹35
+🍲 Misal - ₹40
+
+How to Place an Order:
+To order, just mention the quantity and item name. For example:
+
+“I’d like 2 Vada Pavs and 1 Tea”
+“Please add 3 Idlis and 1 Misal”
+You can order multiple items in one message, and I’ll confirm each item before finalizing your order.
+
+Intent= order.add - context: ongoing-order
+==========================================
+Training phrases =
+
+add 2 missal
+2 tea
+2 vada and 1 missal
+i'd like to order two Samosas and one Misal.
+Order 4 Teas and 3 Samosas for me
+Please get me 1 Tea, 2 Dosas, and 1 Kachori.   etc.
+
+text responce =
+anything else
+
+Intent= order.complete - context: ongoing-order
+==========================================
+Training phrases =
+
+Nope
+no
+Place an order
+That's it
+Done 
+
+
+ response = awesome your order will be reach to you soon and your order id is #
+
+Intent= order.remove - context: ongoing-order
+==========================================
+Training phrases =
+
+dont want samosa
+i dont want samosa in my order
+remove samosa from my order
+please remove samosa
+No  samosa in my order
+
+Intent= track.order
+===================
+Training phrases =
+
+
+track order
+View order details
+Follow my order
+See my order progress
+Track my order
+Check order status
+
+
+Text response:
+1  what is your order id ?
+2 May I have your order ID to look it up?
+3 What’s the order ID for your purchase?
+4 Can you share the order ID with me?
+
+Intent= track.order - context: ongoing-tracking
+==================================================
+
+345
+id is 453
+here it is - 63321
+how about 40?
